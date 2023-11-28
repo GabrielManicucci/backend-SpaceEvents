@@ -46,7 +46,6 @@ export async function sendEmailRoutes(app: FastifyInstance) {
     }
 
     try {
-      // Use await to wait for the sendMail function to complete
       const sendEmail = await transporter.sendMail(message)
       console.log(`Email enviado: ${sendEmail.response}`)
       reply.status(201).send(returnObject)
