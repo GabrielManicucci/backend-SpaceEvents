@@ -16,7 +16,7 @@ export async function sendEmailRoutes(app: FastifyInstance) {
     const bodySchema = z.object({
       user: z.string(),
       email: z.string(),
-      number: z.number(),
+      number: z.string(),
       textarea: z.string(),
     })
 
